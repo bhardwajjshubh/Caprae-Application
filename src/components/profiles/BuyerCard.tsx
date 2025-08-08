@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Badge } from "@/components/ui/Badge"
 import { BuyerProfile } from "@/types"
-import { formatCurrency, formatCompactNumber } from "@/lib/utils"
+import { formatCurrency } from "@/lib/utils"
 import { 
   User, 
   MapPin, 

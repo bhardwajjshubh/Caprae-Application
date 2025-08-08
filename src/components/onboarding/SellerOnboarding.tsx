@@ -286,7 +286,7 @@ export function SellerOnboarding({ onComplete, onBack }: SellerOnboardingProps) 
                 label="Owner Involvement"
                 value={formData.operations?.ownerInvolvement || ''}
                 onChange={(e) => updateFormData({ 
-                  operations: { ...formData.operations!, ownerInvolvement: e.target.value as any }
+                  operations: { ...formData.operations!, ownerInvolvement: e.target.value as 'full-time' | 'part-time' | 'passive' }
                 })}
                 options={[
                   { value: 'full-time', label: 'Full-time (40+ hours/week)' },

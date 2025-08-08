@@ -176,6 +176,6 @@ export interface OnboardingProgress {
   currentStep: number
   totalSteps: number
   completedSteps: number[]
-  responses: Record<string, any>
+  responses: Record<string, string | number | boolean | string[]>
   isComplete: boolean
 }

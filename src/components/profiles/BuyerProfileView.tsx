@@ -7,8 +7,6 @@ import {
   User, 
   MapPin, 
   TrendingUp, 
-  DollarSign, 
-  Star, 
   Briefcase, 
   Target,
   Clock,
@@ -283,7 +281,7 @@ export function BuyerProfileView({ buyer, onAccept, onReject, onBack }: BuyerPro
                 <span className="font-semibold text-green-800">High Compatibility</span>
               </div>
               <p className="text-sm text-green-700">
-                This buyer's criteria align well with businesses in your industry and price range.
+                This buyer&apos;s criteria align well with businesses in your industry and price range.
               </p>
             </CardContent>
           </Card>
