@@ -180,7 +180,7 @@ export default function Home() {
                       className="flex items-center gap-2"
                     >
                       <Users className="w-5 h-5" />
-                      I'm Looking to Buy
+                      I&apos;m Looking to Buy
                       <ArrowRight className="w-4 h-4" />
                     </Button>
                     <Button
@@ -190,7 +190,7 @@ export default function Home() {
                       className="flex items-center gap-2"
                     >
                       <Building className="w-5 h-5" />
-                      I'm Looking to Sell
+                      I&apos;m Looking to Sell
                       <ArrowRight className="w-4 h-4" />
                     </Button>
                   </div>
@@ -344,9 +344,9 @@ export default function Home() {
               <AcquisitionWorkflow
                 deal={mockDeal}
                 userRole="buyer"
-                onStepComplete={(stepId) => console.log('Step completed:', stepId)}
-                onDocumentUpload={(stepId, file) => console.log('Document uploaded:', stepId, file)}
-                onRequestAIAnalysis={(docId) => console.log('AI analysis requested:', docId)}
+                onStepComplete={(stepId: string) => console.log('Step completed:', stepId)}
+                onDocumentUpload={(stepId: string, file: File) => console.log('Document uploaded:', stepId, file)}
+                onRequestAIAnalysis={(docId: string) => console.log('AI analysis requested:', docId)}
               />
             </div>
           </div>
@@ -366,8 +366,8 @@ export default function Home() {
               </Button>
               <AIDocumentAnalyzer
                 documents={mockDocuments}
-                onAnalysisRequest={(docId) => console.log('Analysis requested:', docId)}
-                onDocumentUpload={(file) => console.log('Document uploaded:', file)}
+                onAnalysisRequest={(docId: string) => console.log('Analysis requested:', docId)}
+                onDocumentUpload={(file: File) => console.log('Document uploaded:', file)}
               />
             </div>
           </div>

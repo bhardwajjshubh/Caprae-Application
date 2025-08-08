@@ -151,7 +151,7 @@ export function BuyerOnboarding({ onComplete, onBack }: BuyerOnboardingProps) {
             <Select
               label="Acquisition Type"
               value={formData.acquisitionType || ''}
-              onChange={(e) => updateFormData({ acquisitionType: e.target.value as any })}
+              onChange={(e) => updateFormData({ acquisitionType: e.target.value as 'strategic' | 'financial' | 'both' })}
               options={[
                 { value: 'strategic', label: 'Strategic (Industry expertise/synergies)' },
                 { value: 'financial', label: 'Financial (Investment returns)' },
@@ -163,7 +163,7 @@ export function BuyerOnboarding({ onComplete, onBack }: BuyerOnboardingProps) {
               label="Revenue Focus"
               value={formData.investmentFocus?.revenueFocus || ''}
               onChange={(e) => updateFormData({ 
-                investmentFocus: { ...formData.investmentFocus!, revenueFocus: e.target.value as any }
+                investmentFocus: { ...formData.investmentFocus!, revenueFocus: e.target.value as 'growing' | 'stable' | 'either' }
               })}
               options={[
                 { value: 'growing', label: 'Growing revenue businesses' },
@@ -229,7 +229,7 @@ export function BuyerOnboarding({ onComplete, onBack }: BuyerOnboardingProps) {
                 label="Preferred Team Size"
                 value={formData.investmentFocus?.teamSize || ''}
                 onChange={(e) => updateFormData({ 
-                  investmentFocus: { ...formData.investmentFocus!, teamSize: e.target.value as any }
+                  investmentFocus: { ...formData.investmentFocus!, teamSize: e.target.value as 'solo' | 'small' | 'medium' | 'large' | 'any' }
                 })}
                 options={[
                   { value: 'solo', label: 'Solo founder (1 person)' },
@@ -270,7 +270,7 @@ export function BuyerOnboarding({ onComplete, onBack }: BuyerOnboardingProps) {
             <Select
               label="Experience Level"
               value={formData.experienceLevel || ''}
-              onChange={(e) => updateFormData({ experienceLevel: e.target.value as any })}
+              onChange={(e) => updateFormData({ experienceLevel: e.target.value as 'first-time' | 'experienced' | 'serial' })}
               options={[
                 { value: 'first-time', label: 'First-time buyer' },
                 { value: 'experienced', label: 'Experienced buyer' },
@@ -282,7 +282,7 @@ export function BuyerOnboarding({ onComplete, onBack }: BuyerOnboardingProps) {
               label="Involvement Level"
               value={formData.preferences?.involvementLevel || ''}
               onChange={(e) => updateFormData({ 
-                preferences: { ...formData.preferences!, involvementLevel: e.target.value as any }
+                preferences: { ...formData.preferences!, involvementLevel: e.target.value as 'passive' | 'active' | 'hands-on' }
               })}
               options={[
                 { value: 'passive', label: 'Passive investor (minimal involvement)' },
