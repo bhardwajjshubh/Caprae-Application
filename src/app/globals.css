@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure button text is always visible */
+button {
+  color: inherit;
+}
+
+button[class*="bg-orange"] {
+  color: white !important;
+}
+
+button[class*="bg-blue"] {
+  color: white !important;
+}
+
+button[class*="bg-red"] {
+  color: white !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Focus styles */
+.focus\:ring-2:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Smooth animations */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Debug styles - remove in production */
+.debug-button {
+  background-color: #ef7c44 !important;
+  color: white !important;
+  border: 1px solid #ef7c44 !important;
+}
+
+/* Comprehensive button visibility fixes */
+button:not([class*="ghost"]):not([class*="outline"]) {
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+button[class*="outline"] {
+  color: #ef7c44 !important;
+  background-color: white !important;
+  font-weight: 500 !important;
+}
+
+button[class*="ghost"] {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Force button text inheritance */
+button * {
+  color: inherit !important;
+}
+
+/* Additional fallback classes */
+.btn-primary {
+  background-color: #ef7c44 !important;
+  color: white !important;
+  border: 1px solid #ef7c44 !important;
+  font-weight: 500 !important;
+}
+
+.btn-secondary {
+  background-color: #0ea5e9 !important;
+  color: white !important;
+  border: 1px solid #0ea5e9 !important;
+  font-weight: 500 !important;
+}
+
+/* Gradient text fallback */
+.text-transparent.bg-clip-text {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-image: linear-gradient(to right, #ef7c44, #0ea5e9) !important;
+}
+
+/* Fallback if gradient doesn't work */
+@supports not (-webkit-background-clip: text) {
+  .text-transparent.bg-clip-text {
+    background: none !important;
+    -webkit-text-fill-color: inherit !important;
+    color: #ef7c44 !important;
+  }
+}
+
+/* Ensure icons are always visible */
+.lucide {
+  color: inherit !important;
+}
+
+/* Fix disappearing elements with custom colors */
+[class*="primary-"] {
+  color: #ef7c44 !important;
+}
+
+[class*="bg-primary-"] {
+  background-color: #ef7c44 !important;
+}
+
+[class*="text-primary-"] {
+  color: #ef7c44 !important;
+}
+
+[class*="border-primary-"] {
+  border-color: #ef7c44 !important;
+}
+
+[class*="secondary-"] {
+  color: #0ea5e9 !important;
+}
+
+[class*="bg-secondary-"] {
+  background-color: #0ea5e9 !important;
+}
+
+[class*="text-secondary-"] {
+  color: #0ea5e9 !important;
+}
+
+[class*="border-secondary-"] {
+  border-color: #0ea5e9 !important;
+}
+
+/* Ensure light colored text on dark backgrounds */
+[class*="bg-primary-"]:not([class*="bg-primary-50"]):not([class*="bg-primary-100"]) {
+  color: white !important;
+}
+
+[class*="bg-secondary-"]:not([class*="bg-secondary-50"]):not([class*="bg-secondary-100"]) {
+  color: white !important;
+}
+
+/* Navigation icon visibility */
+nav .lucide {
+  color: #4b5563 !important;
+}
+
+nav button:hover .lucide {
+  color: #1f2937 !important;
+}
+
+/* Notification badge visibility */
+.bg-red-500 {
+  background-color: #ef4444 !important;
+  color: white !important;
+}
+
+/* Ensure Bell icon is always visible */
+.lucide-bell {
+  color: #4b5563 !important;
+}
+
+/* Settings and User icons */
+.lucide-settings,
+.lucide-user {
+  color: #4b5563 !important;
+}
